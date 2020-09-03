@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A Place Where You Can Explore The Quran In Various Ways">
+    <meta name="keywords" content="islam, quran, quran miracles">
+    <meta name="author" content="Wasim Mahmud Surjo">
+    <title>Converter!!</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+        <div class="container">
+           <div id="branding">
+             <h1><span class="highlight">Wasim </span> Mahmud Surjo</h1>
+           </div>
+           <nav>
+             <ul>
+               <li class="current"><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="series.html">All Series</a></li>
+               <li><a href="cse391.html">391 Assignment</a></li> 
+               </ul>
+             </nav>
+        </div>
+    </header>
+
+   <section id="main">
+  <div class="container">
+    <article id="main-col">
+            
+             <ul id="series">
+         <li>
+           
+      <h3> Assignment 2 Task 1b </h3>
+   <ul>
+ <li>
+<!--<form method="POST">-->
+		Convert: <input type="text" name="user_input" id="user_input">
+		<select id="custom_select" style="max-width: 120px;">
+		    <option selected="lb to kg">lb to kg</option>
+		    <option value="kg to lb">kg to lb</option>
+		</select>
+		<button id="go" onclick="convert()">GO</button>
+		<span id="result"></span>
+	<!--</form>-->
+	
+	<script type="text/javascript">
+		
+		function convert(){
+			var user_value=document.getElementById("user_input").value;
+			var user_choice = document.getElementById("custom_select").value;
+				if(user_choice=="lb to kg"){
+					document.getElementById("result").innerHTML=user_value*0.4536+" kilograms";		
+				}
+				else if(user_choice=="kg to lb"){
+					document.getElementById("result").innerHTML=user_value*2.2046+" pounds";	
+				}
+
+		};
+	</script>
+</li> </ul>
+             
+   <p class="button_1"> "Believe Is Power, Confidence Is Strength, Honesty Is Character And Kindness Is Great!" </p>
+         </li>
+
+        </ul>
+      </article>
+
+  </div>
+    </section>
+      
+      
+<footer>
+<p> Wasim Mahmud Surjo, Copyright &copy; 2020</p>
+    <button onclick="myFunction()">Display Last Date of Modification</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = new Date(document.lastModified);
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+</footer>
+
+  </body>
+</html>
+   

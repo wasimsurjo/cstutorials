@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A Place Where You Can Explore The Quran In Various Ways">
+    <meta name="keywords" content="islam, quran, quran miracles">
+    <meta name="author" content="Wasim Mahmud Surjo">
+    <title>Quote Box</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+        <div class="container">
+           <div id="branding">
+             <h1><span class="highlight">Wasim</span> Mahmud Surjo</h1>
+           </div>
+           <nav>
+             <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li class="current"><a href="series.html">All Series</a></li>
+                 <li><a href="cse391.html">391 Assignment</a></li> 
+               </ul>
+             </nav>
+        </div>
+    </header>
+
+<section id="main">
+  <div class="container">
+    <article id="main-col">
+            
+             <ul id="series">
+         <li>
+           
+      <h3> Assignment 2 Task 3 </h3>
+   <ul>
+ <li>
+
+     
+     <script src="libraries\jquery.min.js"></script>
+
+
+<h1>Magic!</h1>	
+<!--Text area-->
+<textarea id="Samples" name="Samples" rows="30" cols="100">
+Sample Item 1
+Sample Item 2
+Sample Item 3
+Sample Item 4
+
+Sample Item 5
+Sample Item 6
+
+
+Sample Item 7
+</textarea>
+<br>
+
+<!--Buttons-->
+<button onclick="Clear()">Clear it</button>
+<button onclick="Capitalize()">Capitalize</button>
+<button onclick="Sort()">Sort</button>
+<button onclick="Reverse()">Reverse</button>
+<button onclick="Stripblank()">Strip Blank</button>
+<button onclick="Add()">Add Numbers</button>
+<button onclick="shuffle()">Shuffle</button>
+
+<!--*******************Javascript*********************-->
+<script type="text/javascript">
+var text_lines_array = $('textarea').val().split('\n'); //text area values stored into arrays
+var textarea_value=document.getElementById("Samples").value //All values at once
+//var text_value=textarea_value;
+function Clear() {
+  document.getElementById("Samples").value = "";
+};
+
+function Capitalize() {
+	var textarea_value=document.getElementById("Samples").value
+	document.getElementById("Samples").value=textarea_value.toUpperCase();
+};
+
+function Sort(){
+		
+	text_lines_array=$('textarea').val().split('\n');
+	for(var i=0; i<text_lines_array.length;i++){
+		if(text_lines_array[i]!=""){
+			var sorted_text=text_lines_array[i].split("").sort().join("");			
+			text_lines_array[i]=sorted_text;
+		}
+		
+	}
+document.getElementById("Samples").value=text_lines_array.join("\n");	
+};
+
+function Reverse(){
+	text_lines_array=$('textarea').val().split('\n');
+	for(var i=0; i<text_lines_array.length;i++){
+		if(text_lines_array[i]!=""){
+			var line_array=text_lines_array[i].split("");
+			var reverse_text=line_array.reverse();
+			var final_text=reverse_text.join("");
+			text_lines_array[i]=final_text;
+		}
+
+	}
+document.getElementById("Samples").value=text_lines_array.join("\n");
+};
+
+function Stripblank(){
+text_lines_array=$('textarea').val().split('\n');
+var new_text=[];
+	for(var i=0; i<text_lines_array.length;i++){
+		if(text_lines_array[i]!=""){
+			var line_array=text_lines_array[i].split(" ");
+			var final_text=line_array.join("");
+			new_text.push(final_text);
+		}
+
+	}
+document.getElementById("Samples").value=new_text.join("\n");
+};
+
+function Add(){
+//document.getElementById("Samples").value="asdasdsa";	
+text_lines_array=$('textarea').val().split('\n');
+	for(var i=0; i<text_lines_array.length;i++){
+		text_lines_array[i]=(i+1)+" "+text_lines_array[i];
+	}
+document.getElementById("Samples").value=text_lines_array.join("\n");
+};
+
+function shuffle(){
+	text_lines_array=$('textarea').val().split('\n');
+	for(var i=text_lines_array.length-1;i>0;i--){
+		var temp=Math.floor(Math.random() * (i + 1));
+		var prev=text_lines_array[i];
+		text_lines_array[i]=text_lines_array[temp];
+		text_lines_array[temp]=prev;
+	}	
+document.getElementById("Samples").value=text_lines_array.join("\n");
+};
+</script>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+</li> </ul>
+             
+   <p class="button_1"> "Believe Is Power, Confidence Is Strength, Honesty Is Character And Kindness Is Great!" </p>
+         </li>
+
+        </ul>
+      </article>
+
+  </div>
+    </section>
+      
+      
+<footer>
+<p> Wasim Mahmud Surjo, Copyright &copy; 2020</p>
+    <button onclick="myFunction()">Display Last Date of Modification</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = new Date(document.lastModified);
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+</footer>
+
+  </body>
+</html>
+
+
+
+
+
+</html>

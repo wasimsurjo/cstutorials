@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A Place Where You Can Explore The Quran In Various Ways">
+    <meta name="keywords" content="islam, quran, quran miracles">
+    <meta name="author" content="Wasim Mahmud Surjo">
+    <title>Math</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+        <div class="container">
+           <div id="branding">
+             <h1><span class="highlight">Wasim</span> Mahmud Surjo</h1>
+           </div>
+           <nav>
+             <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li class="current"><a href="series.html">All Series</a></li>
+                 <li><a href="cse391.html">391 Assignment</a></li> 
+               </ul>
+             </nav>
+        </div>
+    </header>
+
+<section id="main">
+  <div class="container">
+    <article id="main-col">
+            
+             <ul id="series">
+         <li>
+           
+      <h3> Assignment 2 Task 2 </h3>
+   <ul>
+ <li>
+
+		<input type="text" id="Series" name="Series">
+		<button id="go" onclick="calculate()">GO</button>
+		<br><br><span style="padding-left: 62px;">Max:</span> <span id="max"></span>
+		<br><br><span style="padding-left: 62px;">Min:</span> <span id="min"></span>
+		<br><br><span style="padding-left: 62px;">Sum:</span> <span id="sum"></span>
+		<br><br><span style="padding-left: 39px;">Average:</span> <span id="avg"></span>
+		<br><br><b>Reverse Order:</b> <span id="Reverse"></span>
+<script type="text/javascript">
+	function calculate(){
+		var user_value=document.getElementById("Series").value;
+		var array=user_value.split(",");
+		var array_new=array.map(Number);
+		var arrSum = array_new.reduce(function(a, b){
+    	    return a + b;
+	    }, 0);
+
+		document.getElementById("max").innerHTML=Math.max.apply(null,array_new);
+		document.getElementById("min").innerHTML=Math.min.apply(null,array_new);
+		document.getElementById("sum").innerHTML=arrSum
+		document.getElementById("avg").innerHTML=arrSum/array_new.length
+		array_new.reverse();
+		document.getElementById("Reverse").innerHTML=array_new
+
+	}
+</script>     
+     
+     
+     
+</li> </ul>
+             
+   <p class="button_1"> "Believe Is Power, Confidence Is Strength, Honesty Is Character And Kindness Is Great!" </p>
+         </li>
+
+        </ul>
+      </article>
+
+  </div>
+    </section>
+      
+      
+<footer>
+<p> Wasim Mahmud Surjo, Copyright &copy; 2020</p>
+    <button onclick="myFunction()">Display Last Date of Modification</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = new Date(document.lastModified);
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+</footer>
+
+  </body>
+</html>
